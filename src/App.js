@@ -29,17 +29,15 @@ const App = () => {
     //корректно обновлять state с помощью способа ниже, где мы используем анонимную функцию как колбек внутри setExpenses и автоматически (средствами JS) получаем
     //previousState (в нашем случае prevExpenses), то есть тот стейт, который был до получения новых данных и возвращаем "новый" стейт используя spread operator.
     const addExpenseHandler = expense => {
-        debugger
         setExpenses((prevExpenses) => {
-            return [expense, ...prevExpenses]
-        })
-        debugger
-    }
+            return [expense, ...prevExpenses];
+        });
+    };
 
     return (
         <div>
             <NewExpense onAddExpense={addExpenseHandler}/>
-            <Expenses items={INITIAL_EXPENSES}/>
+            <Expenses items={expenses}/>
         </div>
     );
 };
