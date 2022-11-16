@@ -20,7 +20,7 @@ const ExpenseForm = (props) => {
         event.preventDefault(); //чтобы при нажатии на сабмит в форме страница не рестартилась
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate),
         }
 
